@@ -69,48 +69,64 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="xlU-YV-xK4">
             <objects>
-                <viewController id="pH1-ku-D1W" sceneMemberID="viewController">
+                <viewController id="pH1-ku-D1W" customClass="DetailViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iQd-uf-uVf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you going" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfm-Oy-tJG">
-                                <rect key="frame" x="154" y="438" width="106" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you going?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfm-Oy-tJG">
+                                <rect key="frame" x="150" y="438" width="114" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edC-zs-rAb">
                                 <rect key="frame" x="182.5" y="466.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="rsvpChanged:" destination="pH1-ku-D1W" eventType="valueChanged" id="c4y-qf-Fd7"/>
+                                </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppk-KG-FkH">
-                                <rect key="frame" x="186" y="212" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This event is set for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppk-KG-FkH">
+                                <rect key="frame" x="98" y="329" width="218" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay5-Am-tgS">
+                                <rect key="frame" x="155.5" y="366" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay5-Am-tgS">
-                                <rect key="frame" x="184" y="290" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxM-5q-3D7">
+                                <rect key="frame" x="161.5" y="547.5" width="91" height="30"/>
+                                <state key="normal" title="Submit RSVP"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="FxM-5q-3D7" firstAttribute="centerX" secondItem="iQd-uf-uVf" secondAttribute="centerX" id="1nX-vr-ZYA"/>
                             <constraint firstItem="rfm-Oy-tJG" firstAttribute="centerY" secondItem="iQd-uf-uVf" secondAttribute="centerY" id="4aa-j9-MZA"/>
+                            <constraint firstItem="ay5-Am-tgS" firstAttribute="centerX" secondItem="iQd-uf-uVf" secondAttribute="centerX" id="9CC-sp-k0J"/>
+                            <constraint firstItem="ppk-KG-FkH" firstAttribute="centerX" secondItem="iQd-uf-uVf" secondAttribute="centerX" id="AfQ-wQ-zjJ"/>
                             <constraint firstItem="edC-zs-rAb" firstAttribute="top" secondItem="rfm-Oy-tJG" secondAttribute="bottom" constant="8" id="G05-x2-3iC"/>
+                            <constraint firstItem="rfm-Oy-tJG" firstAttribute="top" secondItem="ay5-Am-tgS" secondAttribute="bottom" constant="51" id="NF4-zt-fSi"/>
+                            <constraint firstItem="ay5-Am-tgS" firstAttribute="top" secondItem="ppk-KG-FkH" secondAttribute="bottom" constant="8" id="a6J-wh-fRe"/>
+                            <constraint firstItem="FxM-5q-3D7" firstAttribute="top" secondItem="edC-zs-rAb" secondAttribute="bottom" constant="50" id="ic2-hc-XKE"/>
                             <constraint firstItem="rfm-Oy-tJG" firstAttribute="centerX" secondItem="iQd-uf-uVf" secondAttribute="centerX" id="rNu-Rq-bWJ"/>
                             <constraint firstItem="edC-zs-rAb" firstAttribute="centerX" secondItem="iQd-uf-uVf" secondAttribute="centerX" id="rro-U8-BkL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wew-Z1-5Mr"/>
                     </view>
                     <navigationItem key="navigationItem" id="jbs-tV-cfh"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="ppk-KG-FkH" id="adm-am-Q2h"/>
+                        <outlet property="selectedDateLabel" destination="ay5-Am-tgS" id="Wyd-n0-7bA"/>
+                        <outlet property="switchControl" destination="edC-zs-rAb" id="d4g-XX-flg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvx-Uc-19Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
