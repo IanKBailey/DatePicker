@@ -29,8 +29,9 @@ class DetailViewController: UIViewController {
     
     lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .medium
+        formatter.dateFormat = "EEEE, MMM d, yyyy, h:mm a" //.dateFormat we have more flexibility with the appearance of the string
+//        formatter.dateStyle = .medium
+//        formatter.timeStyle = .medium
         return formatter
     }() //calls the fucntion (closure)
     
