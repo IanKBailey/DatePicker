@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+ 
     
     // we need an (Event) from source view controller (CreateEventViewController)
     var event: Event? //default value is nil
